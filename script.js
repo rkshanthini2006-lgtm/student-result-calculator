@@ -104,6 +104,9 @@ calculateBtn.addEventListener("click", function () {
     document.getElementById("displayStudentName").textContent = studentName;
 
     document.getElementById("displayRegisterNumber").textContent = registerNumber;
+    const today = new Date();
+    document.getElementById("generatedDate").textContent =
+    today.toLocaleString();
     document.getElementById("grade").textContent = grade;
 
     const resultElement = document.getElementById("result");
@@ -133,6 +136,7 @@ resetBtn.addEventListener("click", function () {
     document.getElementById("total").textContent = "--";
     document.getElementById("average").textContent = "--";
     document.getElementById("grade").textContent = "--";
+    document.getElementById("generatedDate").textContent = "--";
 
     const resultElement = document.getElementById("result");
     resultElement.textContent = "--";
@@ -140,4 +144,11 @@ resetBtn.addEventListener("click", function () {
     document.getElementById("displayStudentName").textContent = "--";
     document.getElementById("displayRegisterNumber").textContent = "--";
     document.getElementById("percentage").textContent = "--";
+    const printBtn = document.getElementById("printBtn");
+
+printBtn.addEventListener("click", function () {
+
+    window.print();
+
+});
 });
