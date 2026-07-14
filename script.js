@@ -1,4 +1,5 @@
 const calculateBtn = document.getElementById("calculateBtn");
+const resetBtn = document.getElementById("resetBtn");
 
 calculateBtn.addEventListener("click", function () {
 
@@ -6,26 +7,26 @@ calculateBtn.addEventListener("click", function () {
     const studentName = document.getElementById("studentName").value.trim();
     const registerNumber = document.getElementById("registerNumber").value.trim();
 
-    // Validate Student Name
+    // Validation - Student Name
     if (studentName === "") {
         alert("Please enter Student Name.");
         return;
     }
 
-    // Validate Register Number
+    // Validation - Register Number
     if (registerNumber === "") {
         alert("Please enter Register Number.");
         return;
     }
 
-    // Read Subject Marks as Text
+    // Subject Marks (as text)
     const subject1Input = document.getElementById("subject1").value.trim();
     const subject2Input = document.getElementById("subject2").value.trim();
     const subject3Input = document.getElementById("subject3").value.trim();
     const subject4Input = document.getElementById("subject4").value.trim();
     const subject5Input = document.getElementById("subject5").value.trim();
 
-    // Check if any subject mark is empty
+    // Check empty subject marks
     if (
         subject1Input === "" ||
         subject2Input === "" ||
@@ -37,14 +38,14 @@ calculateBtn.addEventListener("click", function () {
         return;
     }
 
-    // Convert to Number
+    // Convert to numbers
     const subject1 = Number(subject1Input);
     const subject2 = Number(subject2Input);
     const subject3 = Number(subject3Input);
     const subject4 = Number(subject4Input);
     const subject5 = Number(subject5Input);
 
-    // Validate Marks Range
+    // Validate mark range
     if (
         subject1 < 0 || subject1 > 100 ||
         subject2 < 0 || subject2 > 100 ||
@@ -65,7 +66,7 @@ calculateBtn.addEventListener("click", function () {
     let grade = "";
     let result = "";
 
-    // Pass / Fail
+    // Check Pass / Fail
     if (
         subject1 >= 35 &&
         subject2 >= 35 &&
@@ -84,7 +85,7 @@ calculateBtn.addEventListener("click", function () {
             grade = "C";
         } else if (average >= 50) {
             grade = "D";
-        } else if (average >= 35) {
+        } else {
             grade = "E";
         }
 
@@ -98,20 +99,27 @@ calculateBtn.addEventListener("click", function () {
     // Display Result
     document.getElementById("total").textContent = total;
     document.getElementById("average").textContent = average.toFixed(2);
-   document.getElementById("grade").textContent = grade;
+    document.getElementById("percentage").textContent = average.toFixed(2);
 
-const resultElement = document.getElementById("result");
+    document.getElementById("displayStudentName").textContent = studentName;
 
-resultElement.textContent = result;
+    document.getElementById("displayRegisterNumber").textContent = registerNumber;
+    document.getElementById("grade").textContent = grade;
 
-if(result === "Pass"){
-    resultElement.className = "pass";
-}else{
-    resultElement.className = "fail";
-}
-const resetBtn = document.getElementById("resetBtn");
+    const resultElement = document.getElementById("result");
 
-resetBtn.addEventListener("click", function(){
+    resultElement.textContent = result;
+
+    if (result === "Pass") {
+        resultElement.className = "pass";
+    } else {
+        resultElement.className = "fail";
+    }
+
+});
+
+// Reset Button
+resetBtn.addEventListener("click", function () {
 
     document.getElementById("studentName").value = "";
     document.getElementById("registerNumber").value = "";
@@ -129,5 +137,7 @@ resetBtn.addEventListener("click", function(){
     const resultElement = document.getElementById("result");
     resultElement.textContent = "--";
     resultElement.className = "";
-});
+    document.getElementById("displayStudentName").textContent = "--";
+    document.getElementById("displayRegisterNumber").textContent = "--";
+    document.getElementById("percentage").textContent = "--";
 });
