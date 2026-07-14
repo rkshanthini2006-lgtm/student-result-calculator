@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Result Calculator</h1>
+    </header>
+
+    <main>
+
+        <!-- Student Details -->
+        <section>
+
+            <h2>Student Details</h2>
+
+            <div>
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" placeholder="Enter Student Name">
+            </div>
+
+            <div>
+                <label for="registerNumber">Register Number</label>
+                <input type="text" id="registerNumber" placeholder="Enter Register Number">
+            </div>
+
+        </section>
+
+        <!-- Marks Section -->
+        <section>
+
+            <h2>Marks</h2>
+
+            <div>
+                <label for="subject1">Subject 1</label>
+                <input type="number" id="subject1" placeholder="Enter Marks">
+            </div>
+
+            <div>
+                <label for="subject2">Subject 2</label>
+                <input type="number" id="subject2" placeholder="Enter Marks">
+            </div>
+
+            <div>
+                <label for="subject3">Subject 3</label>
+                <input type="number" id="subject3" placeholder="Enter Marks">
+            </div>
+
+            <div>
+                <label for="subject4">Subject 4</label>
+                <input type="number" id="subject4" placeholder="Enter Marks">
+            </div>
+
+            <div>
+                <label for="subject5">Subject 5</label>
+                <input type="number" id="subject5" placeholder="Enter Marks">
+            </div>
+
+        </section>
+
+        <!-- Button -->
+        <section>
+
+            <button id="calculateBtn">
+                Calculate Result
+            </button>
+
+        </section>
+
+        <!-- Result -->
+        <section>
+
+            <h2>Result</h2>
+
+            <p>Total : <span id="total">--</span></p>
+
+            <p>Average : <span id="average">--</span></p>
+
+            <p>Grade : <span id="grade">--</span></p>
+
+            <p>Result : <span id="result">--</span></p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
