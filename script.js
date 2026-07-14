@@ -98,7 +98,36 @@ calculateBtn.addEventListener("click", function () {
     // Display Result
     document.getElementById("total").textContent = total;
     document.getElementById("average").textContent = average.toFixed(2);
-    document.getElementById("grade").textContent = grade;
-    document.getElementById("result").textContent = result;
+   document.getElementById("grade").textContent = grade;
 
+const resultElement = document.getElementById("result");
+
+resultElement.textContent = result;
+
+if(result === "Pass"){
+    resultElement.className = "pass";
+}else{
+    resultElement.className = "fail";
+}
+const resetBtn = document.getElementById("resetBtn");
+
+resetBtn.addEventListener("click", function(){
+
+    document.getElementById("studentName").value = "";
+    document.getElementById("registerNumber").value = "";
+
+    document.getElementById("subject1").value = "";
+    document.getElementById("subject2").value = "";
+    document.getElementById("subject3").value = "";
+    document.getElementById("subject4").value = "";
+    document.getElementById("subject5").value = "";
+
+    document.getElementById("total").textContent = "--";
+    document.getElementById("average").textContent = "--";
+    document.getElementById("grade").textContent = "--";
+
+    const resultElement = document.getElementById("result");
+    resultElement.textContent = "--";
+    resultElement.className = "";
+});
 });

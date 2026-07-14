@@ -9,12 +9,13 @@
 </head>
 
 <body>
-    <main>
-    <header>
-        <h1>Student Result Calculator</h1>
-    </header>
 
-    
+    <main>
+
+        <header>
+            <h1>STUDENT RESULT CALCULATOR</h1>
+        </header>
+
         <!-- Student Details -->
         <section>
 
@@ -22,12 +23,18 @@
 
             <div>
                 <label for="studentName">Student Name</label>
-                <input type="text" id="studentName" placeholder="Enter Student Name">
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter Student Name">
             </div>
 
             <div>
                 <label for="registerNumber">Register Number</label>
-                <input type="text" id="registerNumber" placeholder="Enter Register Number">
+                <input
+                    type="text"
+                    id="registerNumber"
+                    placeholder="Enter Register Number">
             </div>
 
         </section>
@@ -35,56 +42,101 @@
         <!-- Marks Section -->
         <section>
 
-            <h2>Marks</h2>
+            <h2>Subject Marks</h2>
 
             <div>
                 <label for="subject1">Subject 1</label>
-                <input type="number" id="subject1" placeholder="Enter Marks" min="0" max="100">
+                <input
+                    type="number"
+                    id="subject1"
+                    placeholder="Enter Marks"
+                    min="0"
+                    max="100">
             </div>
 
             <div>
                 <label for="subject2">Subject 2</label>
-                <input type="number" id="subject2" placeholder="Enter Marks" min="0" max="100">
+                <input
+                    type="number"
+                    id="subject2"
+                    placeholder="Enter Marks"
+                    min="0"
+                    max="100">
             </div>
 
             <div>
                 <label for="subject3">Subject 3</label>
-                <input type="number" id="subject3" placeholder="Enter Marks" min="0" max="100">
+                <input
+                    type="number"
+                    id="subject3"
+                    placeholder="Enter Marks"
+                    min="0"
+                    max="100">
             </div>
 
             <div>
                 <label for="subject4">Subject 4</label>
-                <input type="number" id="subject4" placeholder="Enter Marks" min="0" max="100">
+                <input
+                    type="number"
+                    id="subject4"
+                    placeholder="Enter Marks"
+                    min="0"
+                    max="100">
             </div>
 
             <div>
                 <label for="subject5">Subject 5</label>
-                <input type="number" id="subject5" placeholder="Enter Marks" min="0" max="100">
+                <input
+                    type="number"
+                    id="subject5"
+                    placeholder="Enter Marks"
+                    min="0"
+                    max="100">
             </div>
 
         </section>
 
-        <!-- Button -->
+        <!-- Buttons -->
         <section>
 
-            <button id="calculateBtn">
-                Calculate Result
-            </button>
+            <div class="button-group">
+
+                <button id="calculateBtn">
+                    Calculate Result
+                </button>
+
+                <button id="resetBtn" type="button">
+                    Reset
+                </button>
+
+            </div>
 
         </section>
 
         <!-- Result -->
-        <section>
+        <section class="result-card">
 
             <h2>Result</h2>
 
-            <p>Total : <span id="total">--</span></p>
+            <p>
+                Total :
+                <span id="total">--</span>
+            </p>
 
-            <p>Average : <span id="average">--</span></p>
+            <p>
+                Average :
+                <span id="average">--</span>
+            </p>
 
-            <p>Grade : <span id="grade">--</span></p>
+            <p>
+                Grade :
+                <span id="grade">--</span>
+            </p>
 
-            <p>Result : <span id="result">--</span></p>
+            <p>
+                Result :
+                <span id="result">--</span>
+            </p>
 
         </section>
 
