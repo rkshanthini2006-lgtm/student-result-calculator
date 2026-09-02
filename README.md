@@ -1,6 +1,6 @@
 # Student Result Calculator
 
-A simple Student Result Calculator built using HTML, CSS, and JavaScript.
+A beginner-friendly web-based Student Result Calculator built using HTML, CSS, and JavaScript. It allows users to enter student details and subject marks and automatically calculates the total marks, average, percentage, grade, and pass/fail result.
 
 ## Features
 
@@ -28,11 +28,13 @@ A simple Student Result Calculator built using HTML, CSS, and JavaScript.
 
 ## Project Structure
 
+```text
 student-result-calculator/
 │── index.html
 │── style.css
 │── script.js
 │── README.md
+```
 
 ## Author
 
