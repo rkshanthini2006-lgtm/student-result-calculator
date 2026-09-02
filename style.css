@@ -118,6 +118,17 @@ input:focus {
     background: #bb2d3b;
 }
 
+/* Print Button */
+
+#printBtn {
+    background: #198754;
+    color: white;
+}
+
+#printBtn:hover {
+    background: #157347;
+}
+
 /* Result Card */
 
 .result-card {
